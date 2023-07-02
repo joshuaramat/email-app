@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import '../styles/header.css';
+
 class Header extends Component {
   renderContent() {
     switch (this.props.auth) {
@@ -16,11 +18,14 @@ class Header extends Component {
 
   render() {
     return (
-      <nav>
+      <nav className='navbar'>
         <div className="nav-wrapper">
           <Link 
             to={this.props.auth ? '/surveys' : '/'} 
             className="brand-logo"
+            style={{ 
+              marginLeft: '1rem'
+            }}
           >
             Email App
           </Link>
