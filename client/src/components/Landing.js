@@ -2,7 +2,16 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div
+      style={{
+        textAlign: 'center'
+      }}
+    >
+      <h1>
+        Email App
+      </h1>
+      Get the right feedback from your users!
+    </div>
   )
 }
 
