@@ -1,16 +1,17 @@
+import 'materialize-css/dist/css/materialize.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
+
+import App from './components/App';
 import reducers from './reducers';
 
-// import materialize css library
-import 'materialize-css/dist/css/materialize.min.css';
-
-const store = createStore(() => reducers, {}, applyMiddleware());
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <Provider store={store}>
     <React.StrictMode>
