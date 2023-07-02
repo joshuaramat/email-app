@@ -2,7 +2,13 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div
+      style={{
+        textAlign: 'center'
+      }}
+    >
+      <h1>Dashboard</h1>
+    </div>
   )
 }
 
