@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Payments from './Payments';
 
 import '../styles/header.css';
+import logo from '../assets/icons/echo_pulse.svg'
 
 class Header extends Component {
   renderContent() {
@@ -33,7 +34,8 @@ class Header extends Component {
             to={this.props.auth ? '/surveys' : '/'} 
             className="brand-logo left"
           >
-            EchoPulse
+            <img src={logo} alt="logo" className="logo" />
+            <span className="brand-name">EchoPulse</span>
           </Link>
           <ul id="nav-mobile" className="right">
             {this.renderContent()}

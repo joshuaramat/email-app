@@ -4,8 +4,21 @@
   --color-text: #fbfbfd;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Helps with responsive design */
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  top: -5px;
+  left: -10px;
+}
+
 .navbar {
-  border-radius: 10px;
   width: 100%;
   background-color: var(--color-navbar);
 }
@@ -16,7 +29,12 @@
 
 .brand-logo {
   margin-left: 1rem;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.brand-name {
+  position: relative;
+  top: -30px;
 }
 
 #nav-mobile {
