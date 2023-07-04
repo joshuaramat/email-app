@@ -1,8 +1,33 @@
+:root {
+  --color-primary: #59E4A7;
+  --color-navbar: #2C7067;
+  --color-text: #fbfbfd;
+}
+
 .navbar {
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: var(--color-navbar);
+}
+
+.nav-wrapper {
+  width: 100%;
+}
+
+.brand-logo {
+  margin-left: 1rem;
+  font-weight: 700;
+}
+
+#nav-mobile {
+  color: var(--color-primary);
+}
+
+li > a {
+  color: var(--color-primary);
 }
 
 .credits {
   margin: 0 1rem;
+  color: var(--color-text);
 }

@@ -1,16 +1,30 @@
-import React from 'react'
+import React from 'react';
+import '../styles/landing.css';
+import hero from '../assets/images/hero.jpg';
 
 const Landing = () => {
   return (
-    <div
-      style={{
-        textAlign: 'center'
-      }}
-    >
-      <h1>
-        Email App
-      </h1>
-      Get the right feedback from your users!
+    <div className='landing-container'>
+      <div className='hero'>
+        <div className='text-container'>
+          <h1>
+            <span className='gradient'>Empower</span> Your Growth 
+            <br /> with Echoing Insights.
+          </h1> 
+          <p>Resonate with your users at scale. EchoPulse helps you reach out en masse, collect meaningful feedback, and amplify your product’s resonance. Tune in to your users' needs, today!</p>
+          <a 
+            href="/auth/google" 
+            className='cta-button'
+          >
+            Get started with Google
+          </a>
+        </div>
+        <img 
+          src={hero} 
+          alt='hero'
+          className='hero-image'
+        />
+      </div>
     </div>
   )
 }

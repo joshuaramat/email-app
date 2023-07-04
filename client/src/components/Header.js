@@ -11,7 +11,7 @@ class Header extends Component {
       case null:
         return;
       case false:
-        return <li><a href="/auth/google">Login With Google</a></li>;
+        return <li><a href="/auth/google">Signup/Login</a></li>;
       default:
         return [
           <li key="3">
@@ -27,18 +27,15 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className='navbar blue-grey lighten-1'>
+      <nav className="navbar darken-4">
         <div className="nav-wrapper">
           <Link 
             to={this.props.auth ? '/surveys' : '/'} 
-            className="brand-logo"
-            style={{ 
-              marginLeft: '1rem'
-            }}
+            className="brand-logo left"
           >
-            Email App
+            EchoPulse
           </Link>
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <ul id="nav-mobile" className="right">
             {this.renderContent()}
           </ul>
         </div>

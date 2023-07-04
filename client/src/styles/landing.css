@@ -1,0 +1,143 @@
+/* Define your design language */
+:root {
+  --font-primary: 'Open Sans', sans-serif;
+  --color-primary: #59E4A7;
+  --color-secondary: #2C7067;
+  --color-text: #1d1d1f;
+  --color-background: #fbfbfd;
+  --font-size-title: 5rem;
+  --font-size-text: 1.5rem;
+  --border-radius: 10px;
+  --button-color: #1B2D35;
+  --button-color-focus: #4bd395;
+  --gradient-background: linear-gradient(to right,#2C7067, #59E4A7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Helps with responsive design */
+}
+
+.gradient {
+  background: var(--gradient-background);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.landing-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+}
+
+.hero {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  order: 2;
+}
+
+h1,
+p,
+.cta-button {
+  order: 1;
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-title);
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+p {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-text);
+  color: var(--color-text);
+  margin-bottom: 20px; 
+}
+
+.cta-button {
+  max-width: 250px;
+  font-family: var(--font-primary);
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color-background);
+  background-color: var(--button-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: var(--button-color-focus);
+}
+
+@media (min-width: 1024px) {
+  .cta-button {
+    max-width: 300px;
+  }
+
+  .hero-image {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* for desktop and laptop screens */
+  .hero {
+    flex-direction: row; /* aligns items in a row */
+    justify-content: space-between; /* equal space around items */
+    text-align: left; /* aligns text to the left */
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px; /* provides space between h1 and p elements */
+  }
+}
+
+@media (max-width: 576px) {
+  .landing-container {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .cta-button {
+    font-size: 1em;
+  }
+}
