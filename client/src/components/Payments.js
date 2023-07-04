@@ -17,7 +17,12 @@ class Payments extends Component {
         }
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
-        <button className="btn">Add Credits</button>
+        <button 
+          className="btn waves-effect" 
+          style={{borderRadius: "30px"}}
+        >
+          Get more Echoes
+        </button>
       </StripeCheckout>
     )
   }

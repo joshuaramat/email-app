@@ -9,7 +9,7 @@ const Landing = () => {
         <div className='text-container'>
           <h1>
             <span className='gradient'>Empower</span> Your Growth 
-            <br /> with Echoing Insights.
+            <br /> With Echoing Insights.
           </h1> 
           <p>Resonate with your users at scale. EchoPulse helps you reach out en masse, collect meaningful feedback, and amplify your product’s resonance. Tune in to your users' needs, today!</p>
           <a 

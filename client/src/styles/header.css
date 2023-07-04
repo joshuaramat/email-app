@@ -41,11 +41,7 @@
   color: var(--color-primary);
 }
 
-li > a {
-  color: var(--color-primary);
-}
-
 .credits {
   margin: 0 1rem;
-  color: var(--color-text);
+  color: #fbfbfd;
 }
