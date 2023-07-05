@@ -7,7 +7,7 @@
   --color-background: #fbfbfd;
   --font-size-title: 5rem;
   --font-size-text: 1.5rem;
-  --border-radius: 30px;
+  --border-radius: 10px;
   --button-color: #1B2D35;
   --button-color-focus: #4bd395;
   --gradient-background: linear-gradient(to right,#2C7067, #4bd395);
@@ -96,7 +96,6 @@ p {
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
-  margin: 20px;
 }
 
 .cta-button:hover {
@@ -127,6 +126,10 @@ p {
     justify-content: center;
     gap: 10px; /* provides space between h1 and p elements */
   }
+
+  .cta-button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -148,5 +151,6 @@ p {
 
   .cta-button {
     font-size: 1em;
+    width: 100%;
   }
 }

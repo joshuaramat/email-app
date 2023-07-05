@@ -10,7 +10,7 @@ const Dashboard = () => {
         <Link to='/surveys/new' className='btn-container'>
           <button 
             className="btn waves-effect btn-large" 
-            style={{borderRadius: "30px"}}
+            style={{borderRadius: "10px"}}
           >
             Start an Echo
           </button>

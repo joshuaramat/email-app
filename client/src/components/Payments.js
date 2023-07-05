@@ -19,7 +19,10 @@ class Payments extends Component {
       >
         <button 
           className="btn waves-effect" 
-          style={{borderRadius: "30px"}}
+          style={{
+            borderRadius: "10px",
+            padding: "0 2rem"
+          }}
         >
           Get more Echoes
         </button>

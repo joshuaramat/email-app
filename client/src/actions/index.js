@@ -20,3 +20,15 @@ export const handleToken = token => async dispatch => {
       console.error(`Error handling the token: ${error}`);
   }
 }
+
+export const submitSurvey = (values, history) => async dispatch => {
+  try{
+    const res = await axios.post('/api/surveys', values);
+
+    history.push('/surveys');
+
+    dispatch({ type: FETCH_USER, payload: res.data });
+  } catch (error) {
+    console.error(`Error submitting the survey: ${error}`);
+  }
+}
