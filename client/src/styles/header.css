@@ -2,6 +2,7 @@
   --color-primary: #59E4A7;
   --color-navbar: #2C7067;
   --color-text: #fbfbfd;
+  --color-text-focus: #1B2D35;
 }
 
 * {
@@ -44,4 +45,37 @@
 .credits {
   margin: 0 1rem;
   color: #fbfbfd;
+}
+
+.login-button {
+  max-width: 250px;
+  font-family: var(--font-primary);
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--color-background);
+  background-color: var(--button-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  line-height: 1.5;
+  margin: 12px;
+}
+
+.login-button:hover {
+  background-color: var(--button-color-focus);
+  color: #1B2D35;
+}
+
+@media (max-width: 425px) {
+  .login-button {
+    display: none;
+  }
+
+  .brand-logo {
+    display: grid;
+    place-items: center;
+  }
 }

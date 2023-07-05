@@ -7,11 +7,13 @@ const Landing = () => {
     <div className='landing-container'>
       <div className='hero'>
         <div className='text-container'>
-          <h1>
+          <h1 className='hero-headline'>
             <span className='gradient'>Empower</span> Your Growth 
             <br /> With Echoing Insights.
           </h1> 
-          <p>Resonate with your users at scale. EchoPulse helps you reach out en masse, collect meaningful feedback, and amplify your product’s resonance. Tune in to your users' needs, today!</p>
+          <p className='hero-text'>
+            Resonate with your users at scale. EchoPulse helps you reach out en masse, collect meaningful feedback, and amplify your product’s resonance. Tune in to your users' needs, today!
+          </p>
           <a 
             href="/auth/google" 
             className='cta-button'

@@ -1,30 +1,62 @@
-/* Define your design language */
 :root {
   --font-primary: 'Open Sans', sans-serif;
   --color-primary: #59E4A7;
   --color-secondary: #2C7067;
-  --color-text: #1d1d1f;
+  --color-text: #1B2D35;
   --color-background: #fbfbfd;
   --font-size-title: 5rem;
   --font-size-text: 1.5rem;
+  --font-size-small: 1em;
   --border-radius: 10px;
   --button-color: #1B2D35;
   --button-color-focus: #4bd395;
   --gradient-background: linear-gradient(to right,#2C7067, #4bd395);
+  --breakpoint-mobile: 576px;
+  --breakpoint-tablet: 992px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large-desktop: 1440px;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Helps with responsive design */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
 }
 
 .gradient {
-  background: var(--gradient-background);
+  height: 100vh;
+  margin: 0;
+  background-size: 200% 200%;
+  /* background: var(--gradient-background); */
+  background-image: linear-gradient(45deg, #1B2D35, #4bd395, #59E4A7, #1B2D35, #59E4A7, #4bd395, #1B2D35);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  animation: gradient 10s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  25% {
+    background-position: 75% 25%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  75% {
+    background-position: 25% 75%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
 }
 
 .landing-container {
@@ -52,7 +84,7 @@
 }
 
 .hero-image {
-  width: 100%;
+  width: 70%;
   max-width: 800px;
   height: auto;
   object-fit: contain;
@@ -92,7 +124,7 @@ p {
   background-color: var(--button-color);
   border: none;
   border-radius: var(--border-radius);
-  padding: 10px 40px;
+  padding: 15px 40px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
@@ -100,35 +132,16 @@ p {
 
 .cta-button:hover {
   background-color: var(--button-color-focus);
+  color: var(--color-text);
 }
 
-@media (min-width: 1024px) {
-  .cta-button {
-    max-width: 300px;
-  }
-
-  .hero-image {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 992px) {
-  /* for desktop and laptop screens */
-  .hero {
-    flex-direction: row; /* aligns items in a row */
-    justify-content: space-between; /* equal space around items */
-    text-align: left; /* aligns text to the left */
-  }
-
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px; /* provides space between h1 and p elements */
-  }
-
-  .cta-button {
-    width: 100%;
+@media (prefers-reduced-motion: reduce) {
+  .gradient {
+    background: var(--gradient-background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 }
 
@@ -142,15 +155,66 @@ p {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: var(--font-size-small);
   }
-
   p {
-    font-size: 1em;
+    font-size: var(--font-size-small);
   }
 
   .cta-button {
     font-size: 1em;
     width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between; 
+    text-align: left; 
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-button {
+    max-width: 300px;
+  }
+
+  .text-conatiner {
+    margin: 0;
+  }
+
+  .hero-image {
+    max-width: 1200px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gradient {
+    height: 100vh;
+    margin: 0;
+    background-size: 200% 200%;
+    background-image: linear-gradient(to right, #1B2D35, #2C7067, #4bd395, #2C7067, #1B2D35, #2C7067, #1B2D35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradient 15s linear infinite;
+  }
+
+  .hero-text {
+    width: 65%;
   }
 }

@@ -12,7 +12,16 @@ class Header extends Component {
       case null:
         return;
       case false:
-        return <li><a href="/auth/google">Sign in with Google</a></li>;
+        return (
+          <li className='navbar-button'>
+            <a 
+              href="/auth/google"
+              className="login-button"
+            >
+              Sign in with Google
+            </a>
+          </li>
+        );
       default:
         return [
           <li key="3">
