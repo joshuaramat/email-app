@@ -69,6 +69,11 @@
   color: #1B2D35;
 }
 
+.beta {
+  vertical-align: super;
+  font-size: 1rem;
+}
+
 @media (max-width: 425px) {
   .login-button {
     display: none;

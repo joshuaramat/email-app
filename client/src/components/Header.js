@@ -44,7 +44,12 @@ class Header extends Component {
             className="brand-logo left"
           >
             <img src={logo} alt="logo" className="logo" />
-            <span className="brand-name">EchoPulse</span>
+            <span className="brand-name">
+              EchoPulse
+              <span className='beta'>
+                beta
+              </span>
+            </span>
           </Link>
           <ul id="nav-mobile" className="right">
             {this.renderContent()}

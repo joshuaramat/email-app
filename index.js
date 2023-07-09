@@ -9,8 +9,8 @@ require('./models/User');
 require('./models/Survey');
 require('./services/passport');
 
+mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
-console.log('mongoURI:', keys.mongoURI);
 
 const app = express();
 
