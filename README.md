@@ -3,7 +3,7 @@
 ## [Live Demo](https://echo-pulse.up.railway.app/)
 ### echo-pulse.up.railway.app/
 
-![screenshot](./server/client/public/echo-pulse.png)
+![screenshot](./client/public/echo-pulse.png)
 
 ## Description
 
