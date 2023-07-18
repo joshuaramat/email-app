@@ -27,10 +27,14 @@ body {
 }
 
 .footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
   background-color: #213C3D;
   color: #6c757d;
-  padding: 50px 25px;
+  padding: 25px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +67,7 @@ body {
 
 .footer-cta:hover {
   background-color: var(--button-color-focus);
-  color: var(--color-text);
+  color: var(--color-background);
 }
 
 @media (max-width: 576px) {

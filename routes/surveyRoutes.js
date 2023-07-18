@@ -10,12 +10,19 @@ const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
 const Survey = mongoose.model('surveys');
 
 module.exports = app => {
-  app.get('/api/surveys', requireLogin, async (req,res) => {
-    const surveys = await Survey.find({ _user: req.user.id })
-      .select({ recipients: false });
+  app.get('/api/surveys', requireLogin, async (req, res) => {
+    try {
+      const surveys = await Survey.find({ _user: req.user.id }).select({ 
+        recipients: false 
+      });
 
-    res.send(surveys);
+      res.send(surveys);
+    } catch (err) {
+      console.error(err); // Log the error for debugging purposes
+      res.status(500).send({ error: 'An error occurred while trying to fetch the surveys.' });
+    }
   });
+
 
   app.get('/api/surveys/:surveyId/:choice', (req, res) => {
     res.send(
